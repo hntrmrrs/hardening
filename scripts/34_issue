@@ -1,9 +1,9 @@
 function f_issue {
-  echo "[$SCRIPT_COUNT] /etc/issue"
+  echo "[$SCRIPT_COUNT] /etc/issue.net"
 
   local TEXT
 
-  for f in /etc/issue /etc/issue.net /etc/motd; do
+  for f in /etc/issue.net /etc/motd; do
     TEXT="\\nBy accessing this system, you consent to the following conditions:
 - This system is for authorized use only.
 - Any or all uses of this system and all files on this system may be monitored.
