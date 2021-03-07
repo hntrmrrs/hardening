@@ -26,7 +26,7 @@ function f_package_install {
   echo "postfix postfix/mailname string $(hostname -f)" | debconf-set-selections
 
   local PACKAGE_INSTALL
-  PACKAGE_INSTALL="acct aide-common automake autoconf bison clang clangd clang-format clang-tidy clang-tools cracklib-runtime debsums emacs flex gnupg2 golang haveged inetutils-tools inetutils-traceroute libpam-pwquality libpam-tmpdir libtool llvm needrestart npm openjdk-11-dbg openjdk-11-jdk openjdk-11-jre openjdk-11-source openssh-server pass postfix rkhunter sysstat systemd-coredump tcpd tmux update-notifier-common vlock zsh $APPARMOR $AUDITD $VM"
+  PACKAGE_INSTALL="acct aide-common automake autoconf bison clang clangd clang-format clang-tidy clang-tools cracklib-runtime debsums emacs flex gnupg2 golang haveged inetutils-tools inetutils-traceroute libpam-pwquality libpam-tmpdir libtool llvm needrestart npm openjdk-11-dbg openjdk-11-jdk openjdk-11-jre openjdk-11-source openssh-server pass postfix python3 python3-pip python3-virtualenv rkhunter sysstat systemd-coredump tcpd tmux update-notifier-common vlock zsh $APPARMOR $AUDITD $VM"
 
   for deb_install in $PACKAGE_INSTALL; do
     $APT install --no-install-recommends "$deb_install"
